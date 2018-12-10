@@ -9,3 +9,12 @@ def count_elements(array)
   end
   new_hash
 end
+
+=begin
+This also works:
+def count_elements(array)
+  array.each_with_object(Hash.new(0)) do |item, hash|
+    hash[item] += 1
+  end
+end
+=end
